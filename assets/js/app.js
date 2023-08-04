@@ -1,50 +1,46 @@
 const form = document.querySelector('#form')
-const API_LINK = 'https://api.github.com/users/'
+const main = document.querySelector('#main')
+const search = document.querySelector('#search')
 
-function getUser(api) {
-    fetch(api)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('User not found')
-            }
-            return response.json()
-        })
-        .then(data => {
-            getUserInfos(data)
-            getRepos(api + '/repos?sort=created')
-            showError(false)
-        })
-        .catch(e => {
-            console.log('Error to fetch')
-            showError(true)
-            getUserInfos(false)
-        })
+async function searchUser(user) {
+    try {
+        const response = await fetch('https://api.github.com/users/' + user)
+        if (!response.ok) {
+            throw new Error('User not found')
+        }
+        const data = await response.json()
+        getUserInfos(data)
+        getRepos('https://api.github.com/users/' + user + '/repos?sort=created')
+        showError(false)
+    } catch (e) {
+        showError(true)
+        console.log(e)
+    }
 }
 
 function showError(e) {
     const errorContainer = document.querySelector('.error')
-    return (
-        e ? errorContainer.classList.remove('js-no-display') :
+
+    if (e) {
+        errorContainer.classList.remove('js-no-display')
+        document.querySelector('.user-card').style.display = 'none'
+    } else {
         errorContainer.classList.add('js-no-display')
-    )
+    }
 }
 
 function getUserInfos(data) {
-    if (!data) return generateUsercard(false)
-
     const avatar = data.avatar_url
     const name = data.name ? data.name : data.login
     const followers = data.followers
     const following = data.following
     const qtdRepos = data.public_repos
     const profileUrl = data.html_url
-    const allInfo = { avatar, name, followers, following, qtdRepos,profileUrl }
+    const allInfo = { avatar, name, followers, following, qtdRepos, profileUrl }
     generateUsercard(allInfo)
 }
 
 function generateUsercard(user) {
-    const main = document.querySelector('#main')
-
     const card = `
     <div class="user-card animate">
             <div class="avatar-container">
@@ -66,15 +62,14 @@ function generateUsercard(user) {
             </div>
         </div>
     `
-    if (!user) return main.innerHTML = ''
     main.classList.add('animate')
     main.innerHTML = card
 }
 
-function getRepos(data) {
-    fetch(data)
-        .then(response => response.json())
-        .then(repo => addReposToCard(repo))
+async function getRepos(data) {
+    const response = await fetch(data)
+    const repos = await response.json()
+    addReposToCard(repos)
 }
 
 function addReposToCard(data) {
@@ -97,15 +92,11 @@ function addReposToCard(data) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    const main = document.querySelector('#main')
     main.classList.remove('animate')
-    const search = document.querySelector('#search')
 
     if (search.value.trim() === '') return
 
-    const user = API_LINK + search.value
-
-    getUser(user)
+    searchUser(search.value)
     search.value = ''
     search.focus()
 })
