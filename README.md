@@ -1,19 +1,31 @@
 # Github profile finder
 
-Build with HTML, SASS, Javascript!
+### O Projeto 💻
 
-This is a project using the github API to search for profiles on the platform, when doing the search some profile information is also shown, such as followers, following, number of repos and five repos (if any) as links.
+Este é um projeto que usa a API do github para pesquisar perfis na plataforma - Ao fazer a pesquisa, algumas informações do perfil também são exibidas, como seguidores, número de repositórios e cinco repositórios (se houver) como links.
 
-## My process
+## Meu Processo :bulb:
 
-For me it was a big challenge to do this project, because I'm still learning the principles of Javascript, but despite the code being huge, I'm happy with the result because it works!!!:smiley: :ok_hand: !!
-As I add more knowledge, I will refactor the code so that it becomes more and more performatively readable
+- Para mim, foi um grande desafio fazer esse projeto, pois quando ele foi realizado eu estava no inicio da minha jornada com o Javascript, mas apesar de o código ser enorme, estou feliz com o resultado porque ele funciona!!!
+- A medida em que eu adquirir mais conhecimento, poderei fazer ajustes para que o código fique o melhor possível de acordo com as minhas skills!
 
 ### Screenshot
 
 ![](./assets/images/screenshot.png)
 
-- Live site [https://gbmoura-github-profiles.netlify.app/](https://gbmoura-github-profiles.netlify.app/)
+### Tecnologias Utilizadas 🚀
 
-- Linkedin [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
-- Frontend Mentor[@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
+- **HTML**: Linguagem de marcação usada para criar e estruturar conteúdo em páginas web, usando tags para definir e organizar elementos como texto, imagens e links.
+- **CSS**: Linguagem de estilo usada para estilizar e formatar o conteúdo HTML em páginas web, permitindo controlar o design, layout e aparência dos elementos, como cores, fontes e espaçamento.
+- **Javascript**:  Linguagem de programação utilizada para tornar as páginas web interativas, permitindo a manipulação dinâmica de conteúdo, interações do usuário e comportamento da página
+
+### Links
+
+- **Live site**: [https://gbmoura-github-profiles.netlify.app/](https://gbmoura-github-profiles.netlify.app/)
+- **Reposítorio**: [https://github.com/gbmouraa/github_profiles](https://github.com/gbmouraa/github_profiles)
+
+### Autor
+
+- **Portfólio** - [Gabriel Moura](https://gmouradev.netlify.app/)
+- **Linkedin** - [Gabriel Moura](https://www.linkedin.com/in/gabriel-moura-b63382161/)
+- **Frontend Mentor** - [@gbmouraa](https://www.frontendmentor.io/profile/gbmouraa)
