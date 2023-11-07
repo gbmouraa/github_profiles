@@ -16,7 +16,7 @@ Este é um projeto que usa a API do github para pesquisar perfis na plataforma -
 ### Tecnologias Utilizadas 🚀
 
 - **HTML**: Linguagem de marcação usada para criar e estruturar conteúdo em páginas web, usando tags para definir e organizar elementos como texto, imagens e links.
-- **CSS**: Linguagem de estilo usada para estilizar e formatar o conteúdo HTML em páginas web, permitindo controlar o design, layout e aparência dos elementos, como cores, fontes e espaçamento.
+- **SCSS**: Uma extensão da linguagem CSS que oferece funcionalidades adicionais, como variáveis, aninhamento e mixins, facilitando a escrita e organização de estilos para páginas web.
 - **Javascript**:  Linguagem de programação utilizada para tornar as páginas web interativas, permitindo a manipulação dinâmica de conteúdo, interações do usuário e comportamento da página
 
 ### Links
