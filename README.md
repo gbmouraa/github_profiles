@@ -11,7 +11,7 @@ As I add more knowledge, I will refactor the code so that it becomes more and mo
 
 ### Screenshot
 
-![](./assets/images/screenshot.png)
+![](./src/assets/screenshot.png)
 
 - Live site [https://gbmoura-github-profiles.netlify.app/](https://gbmoura-github-profiles.netlify.app/)
 
