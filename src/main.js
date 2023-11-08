@@ -7,21 +7,29 @@ const api = axios.create({
 });
 
 async function getUser(user) {
-  await api.get(user).then((response) => {
-    getUserInfos(response.data);
-    getUserRepos(`${user}/repos?sort=created`);
-  });
+  await api
+    .get(user)
+    .then((response) => {
+      getUserInfos(response.data);
+      getUserRepos(`${user}/repos?sort=created`);
+      showError(false);
+    })
+    .catch((error) => {
+      console.log(error);
+      showError(true);
+    });
 }
 
-function showError(e) {
+function showError(error) {
   const errorContainer = document.querySelector(".error");
 
-  if (e) {
+  if (error) {
     errorContainer.classList.remove("js-no-display");
     document.querySelector(".user-card").style.display = "none";
-  } else {
-    errorContainer.classList.add("js-no-display");
+    return;
   }
+
+  return errorContainer.classList.add("js-no-display");
 }
 
 function getUserInfos(data) {
@@ -31,8 +39,8 @@ function getUserInfos(data) {
   const following = data.following;
   const qtdRepos = data.public_repos;
   const profileUrl = data.html_url;
-  const allInfo = { avatar, name, followers, following, qtdRepos, profileUrl };
-  generateUsercard(allInfo);
+  const info = { avatar, name, followers, following, qtdRepos, profileUrl };
+  generateUsercard(info);
 }
 
 function generateUsercard(user) {
