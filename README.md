@@ -18,6 +18,7 @@ Este é um projeto que usa a API do github para pesquisar perfis na plataforma -
 - **HTML**: Linguagem de marcação usada para criar e estruturar conteúdo em páginas web, usando tags para definir e organizar elementos como texto, imagens e links.
 - **SCSS**: Uma extensão da linguagem CSS que oferece funcionalidades adicionais, como variáveis, aninhamento e mixins, facilitando a escrita e organização de estilos para páginas web.
 - **Javascript**:  Linguagem de programação utilizada para tornar as páginas web interativas, permitindo a manipulação dinâmica de conteúdo, interações do usuário e comportamento da página
+- **Axios**: Biblioteca JavaScript utilizada para realizar requisições HTTP a servidores, oferecendo uma maneira simples e eficiente de lidar com solicitações e respostas de APIs.
 
 ### Links
 
