@@ -11,7 +11,7 @@ Este é um projeto que usa a API do github para pesquisar perfis na plataforma -
 
 ### Screenshot
 
-![](./assets/images/screenshot.png)
+![](src/assets/screenshot.png)
 
 ### Tecnologias Utilizadas 🚀
 

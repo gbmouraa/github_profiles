@@ -2,30 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/app.js" defer></script>
-    <title>Github Profiles</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Gabriel Moura">
+	<link rel="stylesheet" href="src/styles/main.css">
+	<link rel="shortcut icon" href="src//assets/favicon.png" type="image/x-icon">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
+	<script src="src/main.js" defer></script>
+	<title>Github Profiles</title>
 </head>
 
 <body>
-    <img src="./assets/images/github.svg" alt="Github logo" class="github-logo">
-    <form id="form">
-        <input type="text" placeholder="Search a Github User" id="search">
-    </form>
-    <main id="main">
-    </main>
-    <div class="error js-no-display">
-        <img src="./assets/images/github2.svg" alt="github image">
-        <h1>404 - Not Found</h1>
-        <p>Sorry, user not found</p>
-    </div>
-    <script>
-        window.onload = ()=>{
-            document.getElementById('search').focus()
-        }
-    </script>
+	<img src="src/assets/github.svg" alt="Github logo" class="github-logo">
+	<form id="form">
+		<input type="text" placeholder="Search a Github User" id="search">
+	</form>
+	<main id="main">
+	</main>
+	<div class="error js-no-display">
+		<img src="src/assets/github2.svg" alt="github image">
+		<h1>404 - Not Found</h1>
+		<p>Sorry, user not found</p>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
+	<script>
+		window.onload = () => {
+			document.getElementById('search').focus()
+		}
+	</script>
 </body>
 
 </html>
